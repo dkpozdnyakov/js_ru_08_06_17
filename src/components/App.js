@@ -36,7 +36,7 @@ class App extends Component {
     changeLanguage = language => ev => this.setState({ language })
 
     render() {
-        console.log('---', 0)
+        console.log('---', 0,1+1)
         return (
             <ConnectedRouter history = {history}>
                 <LangProvider language = {this.state.language}>
@@ -53,6 +53,7 @@ class App extends Component {
                         </div>
                         <UserForm value={this.state.username} onChange={this.handleUserChange}/>
                         <Switch>
+                            
                             <Route path="/counter" component={Counter}/>
                             <Route path="/filters" component={Filters}/>
                             <Route path="/articles/new" component={NewArticle}/>
